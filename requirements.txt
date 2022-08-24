@@ -1,5 +1,4 @@
 asgiref==3.5.2
-autopep8==1.7.0
 dj-database-url==1.0.0
 dj-email-url==1.0.5
 Django==4.1

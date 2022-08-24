@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Log Out{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <p class="title-form">Log Out</p>
+        <div class="card post-form">
+            <div class="card-body" style="display:flex;justify-content:center;align-items:center;flex-direction:column;">
+                <p>You are now logged out. Come back soon!</p>
+                <a class="post-submit" href="{% url 'login' %}" style="text-decoration: none;">Log in again</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}

@@ -22,7 +22,7 @@ class CustomUser(AbstractUser):
     role = models.ForeignKey(
         Role,
         on_delete=models.CASCADE,
-        black=True,
+        blank=True,
         null=True
     )
     department = models.ForeignKey(
