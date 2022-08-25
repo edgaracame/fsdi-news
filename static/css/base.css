@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,300;6..72,400;6..72,700&display=swap");
 
+:root {
+  --white: #f7f7f7;
+}
+
 body {
   font-family: "Newsreader", serif;
   margin: 0;
@@ -7,11 +11,44 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background-color: var(--white);
 }
 
 p {
   margin: 0;
   padding: 0;
+}
+
+.navbar {
+  background-color: var(--white);
+}
+
+.navbar a {
+  text-transform: uppercase;
+  color: black;
+}
+
+.navbar .navbar-brand:hover {
+  color: black;
+}
+
+.navbar .navbar-nav {
+  margin-left: 15px;
+}
+
+.navbar .nav-link {
+  color: black;
+  text-decoration: none;
+  margin-right: 2rem;
+  background: linear-gradient(to left, var(--white) 50%, black 50%) right;
+  background-size: 250%;
+  transition: 0.25s ease-out;
+  padding: 0.2rem;
+}
+
+.navbar .nav-link:hover {
+  background-position: 0 150%;
+  color: var(--white);
 }
 
 .footer {
@@ -22,4 +59,185 @@ p {
   width: 100%;
   text-align: center;
   padding: 10px 0;
+}
+
+.welcome-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.welcome-text p:first-child {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.welcome-text p:last-child {
+  font-size: 32px;
+  font-style: italic;
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-phone,
+.contact-mail {
+  background-color: var(--white);
+  color: black;
+  text-align: center;
+  padding: 75px 75px;
+}
+
+.contact-phone i,
+.contact-mail i {
+  background-color: black;
+  padding: 15px;
+  color: var(--white);
+  border-radius: 100%;
+  margin: 10px;
+}
+
+.contact-phone p:last-child,
+.contact-mail p:last-child {
+  font-weight: bold;
+}
+
+.card {
+  border-radius: 0;
+  border: none;
+  background-color: black;
+  color: white;
+}
+
+.article-list .article-title {
+  font-weight: bold;
+  text-align: center;
+}
+
+.article-list .article-content {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.article-list .article-date {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #797979;
+  margin-bottom: 15px;
+}
+
+.article-list a {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--white);
+  background-color: black;
+  padding: 5px 10px;
+  font-weight: bold;
+}
+
+.article-list a:hover {
+  color: black;
+  background-color: var(--white);
+}
+
+.article-detail .article-title {
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 48px;
+}
+
+.article-detail .article-subtitle {
+  text-align: center;
+  font-style: italic;
+  font-size: 24px;
+}
+
+.article-detail .article-content {
+  margin: 25px 0;
+  font-size: 28px;
+}
+
+.article-detail .article-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.article-detail .article-author,
+.article-detail .article-date {
+  font-size: 14px;
+}
+
+.article-detail .article-back {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.article-detail .article-back a {
+  display: inline-block;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+  background-color: var(--white);
+  padding: 5px 15px;
+  font-weight: bold;
+}
+
+.article-detail .article-back a:hover {
+  background-color: black;
+  color: var(--white);
+}
+
+.title-form {
+  color: var(--red);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.article-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.article-form .card-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+p > input,
+p > textarea,
+p > select,
+form > input {
+  width: 100%;
+  padding: 5px;
+  margin: 5px;
+}
+
+.article-submit {
+  border: none;
+  background-color: black;
+  color: var(--white);
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 5px 15px;
+  font-weight: bold;
+  margin-top: 25px;
+}
+
+.article-submit:hover {
+  color: black;
+  background-color: var(--white);
 }

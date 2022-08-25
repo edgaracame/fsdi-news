@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ article.title }}{% endblock title %}
+
+{% block content %}
+    <div class="container article-detail">
+        <p class="article-title">{{ article.title }}</p>
+        <p class="article-subtitle">"{{ article.subtitle }}"</p>
+        <p class="article-content">{{ article.body }}</p>
+        <div class="article-footer">
+            <p class="article-author"><i class="fa-solid fa-user"></i>&nbsp; {{ article.author }}</p>
+            <p class="article-date">&nbsp; <i class="fa-solid fa-clock"></i>&nbsp;  {{ article.created_on }}</p>
+        </div>
+        <div class="article-back">
+            <a href="{% url 'article_list' %}" class="card-text">Go back!</a>
+            {% if user.id == article.author.id %}
+                <div class="article-extra" style="margin-top:5px;">
+                    <a href="{% url 'article_edit' article.id %}" class="card-text button-extra">Update</a>
+                    <a href="{% url 'article_delete' article.id %}" class="card-text button-extra">Delete</a>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+{% endblock content %}

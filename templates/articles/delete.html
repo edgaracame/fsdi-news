@@ -1,10 +1,10 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block title %}Change Password{% endblock title %}
+{% block title %}Delete Article{% endblock title %}
 
 {% block content %}
     <div class="container">
-        <p class="title-form">Change Password</p>
+        <p class="title-form">Delete an Article</p>
         <div class="card article-form">
             <div class="card-body">
                 <form method="POST">
@@ -12,7 +12,8 @@
                     <div class="form-group">
                         {{ form.as_p }}
                     </div>
-                    <button class="article-submit" type="submit">Save</button>
+                    <p>Are you sure you want to delete "{{ article.title }}"?</p>
+                    <button class="article-submit" type="submit" style="margin-top:15px;">Confirm</button>
                 </form>
             </div>
         </div>
