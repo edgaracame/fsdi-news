@@ -25,7 +25,7 @@ class ArticleDetailView(DetailView):
 class ArticleCreateView(LoginRequiredMixin, CreateView):
     template_name = "articles/new.html"
     model = Article
-    fields = ["title", "subtitle", "body"]
+    fields = ["title", "subtitle", "body", "_type", "status"]
 
     def form_valid(self, form):
         form.instance.author = self.request.user
